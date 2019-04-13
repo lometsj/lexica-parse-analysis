@@ -1,0 +1,42 @@
+first集如下:
+first [(]: (
+first [)]: )
+first [i]: i
+first [+]: +
+first [*]: *
+first [@]: @
+first [E]: ( i
+first [A]: + @
+first [T]: ( i
+first [B]: * @
+first [F]: ( i
+
+follow集如下：
+follow [E]: # )
+follow [A]: # )
+follow [T]: # ) +
+follow [B]: # ) +
+follow [F]: # ) + *
+
+预测分析表如下：
+	#	(	)	i	+	*
+E	 	E->TA	 	E->TA
+A	A->@	 	A->@	 	A->+TA
+T	 	T->FB	 	T->FB
+B	B->@	 	B->@	 	B->@	B->*FB
+F	 	F->(E)	 	F->i
+
+请输入字：
+i*i+i
+E->TA
+T->FB
+F->i
+B->*FB
+F->i
+B->@
+A->+TA
+T->FB
+F->i
+B->@
+A->@
+succeed!该字有效，所用产生式如上。

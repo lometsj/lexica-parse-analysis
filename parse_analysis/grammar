@@ -1,0 +1,14 @@
+E A T B F C
+B -> E B
+B -> @
+E -> A T
+A -> key
+T -> @
+T -> const
+T -> id F
+F -> @
+F -> limiter C
+C -> id
+C -> const
+
+
